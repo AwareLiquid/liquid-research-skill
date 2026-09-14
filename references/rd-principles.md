@@ -99,9 +99,6 @@
 
 ### 液态架构参考拆解
 
-| 组件 | 功能目标 | 系统目标 | AwareLiquid 现有路线 |
-|---|---|---|---|
-| 液态核心状态模块 | 连续时间动力学状态演化 | 为时序信号提供原生物理先验 | LTC substrate（AwareLiquid-Physic / M1） |
-| 选择性门控模块 | 决定更新/保留/输出 | 稀疏激活、降低冗余计算 | MT-LNN gating / capsule v2（M1） |
-| 混合注意力层 | 对状态做稀疏/选择性注意力 | 长程依赖下的参数效率 | sparse / selective attention |
-| 持久记忆模块 | O(1) 工作记忆 / 长期存储 | 恒定内存的上下文保持 | O(1) working memory / cloud-augmented memory（M1） |
+完整的人脑抽象模块 → 组件拆解（9 个组件、7 字段全填实、含 AwareLiquid 现有路线映射、
+依赖关系与立项任务清单）见 `brain-component-map.md`，此处不重复。上面的字段表是通用模板，
+`brain-component-map.md` 是套用该模板后的完整实例。

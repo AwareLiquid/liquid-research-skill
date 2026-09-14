@@ -43,22 +43,33 @@ roadmap. Full notes and the component-decomposition template: `references/rd-pri
 
 ## Componentized R&D method (mandatory for 立项)
 
-Decompose any research direction into independent functional components, each with:
-- a clear functional goal AND system goal;
-- explicitly defined input / output boundaries;
-- pre-specified cross-component interactions and coordination (no black-box stacking).
+Never approve a vague goal like "develop a brain-like architecture." Translate it into concrete
+components by abstracting the human brain's functional systems, then plan each one.
 
-Reference decomposition for the liquid architecture:
+**From vague goal to 立项 tasks (3 steps):**
+1. Replace the vague goal with a list of *human-brain functional systems* (memory, attention,
+   gating, neuromodulation, plasticity, predictive coding, deliberation — not "intelligence").
+2. Map each system to one computable component with defined input / output boundaries.
+3. Fill the 7-field template for every component (functional goal, system goal, input, output,
+   cross-component interaction, inductive bias, verification). A component is 立项-ready only
+   when all 7 fields are concrete and its verification is independently testable.
 
-| Component | 功能目标 | AwareLiquid line |
-|---|---|---|
-| 液态核心状态模块 (liquid core state) | 连续时间动力学状态演化 | LTC substrate (AwareLiquid-Physic / M1) |
-| 选择性门控模块 (selective gating) | 决定更新/保留/输出 | MT-LNN gating / capsule v2 (M1) |
-| 混合注意力层 (hybrid attention) | 对状态的稀疏/选择性注意力 | sparse / selective attention |
-| 持久记忆模块 (persistent memory) | O(1) 工作记忆 / 长期存储 | O(1) working memory / cloud-augmented memory |
+The full human-brain → component map (9 components, all 7 fields filled + AwareLiquid line mapping
++ benchmark guidance + a ready-to-use task list): `references/brain-component-map.md`.
 
-See `references/rd-principles.md` for the full I/O-boundary template and per-component definition
-checklist.
+Overview:
+
+| 人脑功能系统 | 组件 | 归纳偏置 | AwareLiquid line |
+|---|---|---|---|
+| 神经元膜电位/突触动力学 | 液态核心状态模块 | 连续时间动力学 | LTC substrate (Physic / M1) |
+| 丘脑 + 初级感觉皮层 | 感知编码模块 | 稀疏/脉冲编码 | AwareLiquid-World / human-brain-simulation |
+| 丘脑门控 + 基底节 | 选择性门控模块 | 稀疏选择 | MT-LNN gating / capsule v2 (M1) |
+| 前额叶注意网络 | 混合注意力层 | 稀疏注意力 | sparse / selective attention |
+| 海马体 + 前额叶工作记忆 | 持久记忆模块 | 恒定内存 O(1) | O(1) working memory / cloud memory (M1) |
+| 多巴胺/血清素/乙酰胆碱 | 神经调质模块 | 全局低维调制 | 待建 |
+| STDP / Hebbian | 可塑性学习规则 | 时序因果可塑性 | 待建 |
+| 皮层预测编码 | 预测编码模块 | 逐步修正/去噪 | AwareLiquid-World (JEPA) |
+| 前额叶 System 2 | 审慎推理/路由模块 | 自适应计算 | deliberation router (M1) |
 
 ## Liquid-architecture specifics
 
