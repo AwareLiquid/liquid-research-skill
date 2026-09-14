@@ -99,6 +99,6 @@
 
 ### 液态架构参考拆解
 
-完整的人脑抽象模块 → 组件拆解（9 个组件、7 字段全填实、含 AwareLiquid 现有路线映射、
-依赖关系与立项任务清单）见 `brain-component-map.md`，此处不重复。上面的字段表是通用模板，
-`brain-component-map.md` 是套用该模板后的完整实例。
+完整的人脑抽象模块 → 组件拆解（机制层 4 项 + 功能系统层 10 模块，7 字段全填实、
+含 AwareLiquid 现有路线映射、环拓扑与立项任务清单）见 `brain-component-map.md`，此处不重复。
+上面的字段表是通用模板，`brain-component-map.md` 是套用该模板后的完整实例。

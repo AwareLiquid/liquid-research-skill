@@ -54,21 +54,28 @@ components by abstracting the human brain's functional systems, then plan each o
    cross-component interaction, inductive bias, verification). A component is 立项-ready only
    when all 7 fields are concrete and its verification is independently testable.
 
-The full human-brain → component map (9 components, all 7 fields filled + AwareLiquid line mapping
-+ benchmark guidance + a ready-to-use task list): `references/brain-component-map.md`.
+The full map — separated into a cross-cutting **mechanism layer** and a **functional-system
+layer**, connected by **loop topology** (not a sparse list) — lives in
+`references/brain-component-map.md`.
 
 Overview:
 
+**机制层 (横切, 不单独立项):** 连续时间动力学 (LTC) · 可塑性规则 (STDP/Hebbian) ·
+神经调质广播 · 预测编码 (贯穿原则)
+
+**功能系统层 (可立项的脑模块):**
+
 | 人脑功能系统 | 组件 | 归纳偏置 | AwareLiquid line |
 |---|---|---|---|
-| 神经元膜电位/突触动力学 | 液态核心状态模块 | 连续时间动力学 | LTC substrate (Physic / M1) |
-| 丘脑 + 初级感觉皮层 | 感知编码模块 | 稀疏/脉冲编码 | AwareLiquid-World / human-brain-simulation |
-| 丘脑门控 + 基底节 | 选择性门控模块 | 稀疏选择 | MT-LNN gating / capsule v2 (M1) |
-| 前额叶注意网络 | 混合注意力层 | 稀疏注意力 | sparse / selective attention |
-| 海马体 + 前额叶工作记忆 | 持久记忆模块 | 恒定内存 O(1) | O(1) working memory / cloud memory (M1) |
-| 多巴胺/血清素/乙酰胆碱 | 神经调质模块 | 全局低维调制 | 待建 |
-| STDP / Hebbian | 可塑性学习规则 | 时序因果可塑性 | 待建 |
-| 皮层预测编码 | 预测编码模块 | 逐步修正/去噪 | AwareLiquid-World (JEPA) |
+| 丘脑 + 感觉皮层 | 感知编码模块 | 稀疏/脉冲编码 | AwareLiquid-World / human-brain-simulation |
+| 前额叶 PFC | 工作记忆模块 | 恒定内存 O(1) | O(1) working memory (M1) |
+| 海马体 | 情景记忆模块 | 快速一次性编码 | 待建 |
+| 新皮层 (海马-皮层固化) | 记忆固化模块 | 回放巩固 | 待建 |
+| 前额叶-顶叶 + 丘脑门控 | 注意力模块 | 稀疏注意力 | sparse / selective attention |
+| 基底节 + 多巴胺 RPE | 动作选择模块 | 奖赏预测误差 | 待建 |
+| 小脑 | 前向模型模块 | 内部前向模型 | AwareLiquid-Physic / World (JEPA) |
+| 杏仁核 + 腹侧纹状体 | 显著性模块 | 快速 salience/value | 待建 |
+| 默认模式网络 DMN | 内部模拟模块 | 自发生成 | M2 (workspace) |
 | 前额叶 System 2 | 审慎推理/路由模块 | 自适应计算 | deliberation router (M1) |
 
 ## Liquid-architecture specifics
