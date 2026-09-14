@@ -40,6 +40,10 @@ roadmap. Full notes and the component-decomposition template: `references/rd-pri
   or "optimize model performance." Require the componentized decomposition below.
 - **Inductive bias is the scale-up lever.** Rank proposals by the strength and correctness of the
   inductive bias they introduce — this, not parameter count, predicts scale-up efficiency.
+- **Change the data form with the architecture.** Data form *is* the fitting target — next-token
+  text re-imports the autoregressive ceiling. When reviewing an architecture change, ask whether the
+  supervision signal changed too; if not, the change is at best quantitative.
+  See `references/data-form.md`.
 
 ## Componentized R&D method (mandatory for 立项)
 
@@ -77,6 +81,10 @@ Overview:
 | 杏仁核 + 腹侧纹状体 | 显著性模块 | 快速 salience/value | 待建 |
 | 默认模式网络 DMN | 内部模拟模块 | 自发生成 | M2 (workspace) |
 | 前额叶 System 2 | 审慎推理/路由模块 | 自适应计算 | deliberation router (M1) |
+
+**第四维度 — 数据形态/监督层**: 数据形态直接决定拟合目标。换架构必须同步审视数据形态与监督
+信号（否则自回归瓶颈从数据入口回流）。组件 → 数据形态 → 监督信号的完整映射见
+`references/data-form.md`。
 
 ## Liquid-architecture specifics
 
