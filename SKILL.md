@@ -31,11 +31,19 @@ roadmap. Full notes and the component-decomposition template: `references/rd-pri
    but migrating it to general / temporal intelligence requires a full training-methodology rebuild —
    a physics-mechanism-level challenge, not an architecture tweak.
 
+**North star (北极星):** 比 Transformer **小千倍**、同时**泛化与学习效率更强**。任何方案若不能
+合理论证其服务于这个目标——而不是「换个注意力的微小调整」——就不值得立项。
+
 ## Decision rules
 
 - **Judge a proposal by its fitting target, not its topology.** Ask: "Does this change *what* the
   model is fitting (the distribution target), or only *how* it fits the same distribution?" Only the
   former can be paradigm-level; the latter is at best marginal scale-up.
+- **Never take the Transformer route — nor its linear / RNN variants.** RWKV, Mamba, and multi-head /
+  linear-attention swaps all keep the same autoregressive next-token target; they are marginal
+  adjustments, not a paradigm change, and can never reach the north-star (小千倍 + 更强泛化). A
+  proposal that only replaces the attention mechanism is disqualified on sight — it is no different
+  from RWKV / Mamba.
 - **Reject vague research goals.** Never approve 立项 phrased as "develop a brain-like architecture"
   or "optimize model performance." Require the componentized decomposition below.
 - **Inductive bias is the scale-up lever.** Rank proposals by the strength and correctness of the
